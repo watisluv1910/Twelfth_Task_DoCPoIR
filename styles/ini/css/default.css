@@ -180,7 +180,6 @@ ol[role=list] {
 
 html {
   font-size: 62.5%;
-  background: var(--clr-surface);
 }
 
 /* Set core root defaults */
@@ -241,7 +240,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.theme-light {
+.theme-dark {
   --clr-black: #001219;
   --clr-pastel: #E9D8A6;
   --clr-white: #EFEFEF;

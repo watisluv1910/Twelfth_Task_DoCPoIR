@@ -24,3 +24,6 @@
   justify-content: center;
   align-items: center;
 }
+.main-content .task-1 .img-container {
+  padding: 3rem;
+}
