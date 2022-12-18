@@ -39,4 +39,44 @@
         }
     }
 
+    .task-2 {
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+            padding: 3rem;
+
+            .grid-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                text-align: center;
+
+                padding: 1.5rem;
+
+                &.heading {
+                    grid-column-end: span 2;
+                    gap: 0.5rem;
+                }
+    
+                &.card {
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    border-radius: 1.5rem;
+                    background: linear-gradient(60deg, var(--clr-mid-orange),  var(--clr-dark-orange), var(--clr-dark-red));
+
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        background: linear-gradient(60deg, var(--clr-dark-orange), var(--clr-dark-red), var(--clr-mid-orange));
+                    }
+                }
+            }
+        }
+    }
 }

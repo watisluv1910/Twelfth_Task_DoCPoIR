@@ -27,3 +27,31 @@
 .main-content .task-1 .img-container {
   padding: 3rem;
 }
+.main-content .task-2 .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 3rem;
+}
+.main-content .task-2 .grid-container .grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+.main-content .task-2 .grid-container .grid-item.heading {
+  grid-column-end: span 2;
+  gap: 0.5rem;
+}
+.main-content .task-2 .grid-container .grid-item.card {
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(60deg, var(--clr-mid-orange), var(--clr-dark-orange), var(--clr-dark-red));
+  transition: all 0.2s ease-in-out;
+}
+.main-content .task-2 .grid-container .grid-item.card:hover {
+  transform: scale(1.05);
+  background: linear-gradient(60deg, var(--clr-dark-orange), var(--clr-dark-red), var(--clr-mid-orange));
+}
