@@ -161,4 +161,26 @@
             }
         }
     }
+
+    .task-4 {
+
+        .menu-container {
+            position: relative;
+
+            display: flex;
+            gap: 3rem;
+
+            .indicator {
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+
+                height: 2px;
+
+                background: var(--clr-red);
+
+                transition: all 0.5s ease-in-out;
+            }     
+        }
+    }
 }
