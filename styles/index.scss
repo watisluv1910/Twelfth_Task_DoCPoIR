@@ -393,6 +393,74 @@
             }
         }
     }
+
+    .task-8 {
+
+        .form-container {
+
+            width: min(35rem, 50%);
+
+            form {
+                position: relative;
+                width: 100%;
+
+                input {
+                    height: 4rem;
+                    width: inherit;
+
+                    padding-inline-start: 1.5rem;
+
+                    border-radius: 1rem;
+                    border: 2px solid rgb(195, 195, 195);
+
+                    color: var(--clr-black);
+
+                    outline: none;
+
+                    &:focus {
+                        border: 2px solid var(--clr-red);
+
+                        & ~ .form-counter {
+                            color: var(--clr-red);
+                            
+                            &::before {
+                                background: var(--clr-red);
+                            }
+                        }
+
+                        &::placeholder {
+                            color: var(--clr-red);
+                        }
+                    }
+                }
+
+                .form-counter {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0.1rem;
+
+                    transform:  translate(-50%, -50%);
+
+                    color: var(--clr-black);
+
+                    padding-inline: 0.5rem;
+
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: -0.5rem;
+
+                        content: '';
+
+                        height: 100%;
+                        width: 1px;
+
+                        background: var(--clr-black);
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes topBubbles{

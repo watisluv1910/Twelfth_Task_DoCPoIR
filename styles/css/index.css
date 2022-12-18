@@ -255,6 +255,58 @@
   -webkit-animation: bottomBubbles ease-in-out 0.75s forwards;
           animation: bottomBubbles ease-in-out 0.75s forwards;
 }
+.main-content .task-8 .form-container {
+  width: min(35rem, 50%);
+}
+.main-content .task-8 .form-container form {
+  position: relative;
+  width: 100%;
+}
+.main-content .task-8 .form-container form input {
+  height: 4rem;
+  width: inherit;
+  -webkit-padding-start: 1.5rem;
+          padding-inline-start: 1.5rem;
+  border-radius: 1rem;
+  border: 2px solid rgb(195, 195, 195);
+  color: var(--clr-black);
+  outline: none;
+}
+.main-content .task-8 .form-container form input:focus {
+  border: 2px solid var(--clr-red);
+}
+.main-content .task-8 .form-container form input:focus ~ .form-counter {
+  color: var(--clr-red);
+}
+.main-content .task-8 .form-container form input:focus ~ .form-counter::before {
+  background: var(--clr-red);
+}
+.main-content .task-8 .form-container form input:focus::-moz-placeholder {
+  color: var(--clr-red);
+}
+.main-content .task-8 .form-container form input:focus:-ms-input-placeholder {
+  color: var(--clr-red);
+}
+.main-content .task-8 .form-container form input:focus::placeholder {
+  color: var(--clr-red);
+}
+.main-content .task-8 .form-container form .form-counter {
+  position: absolute;
+  right: 0;
+  bottom: 0.1rem;
+  transform: translate(-50%, -50%);
+  color: var(--clr-black);
+  padding-inline: 0.5rem;
+}
+.main-content .task-8 .form-container form .form-counter::before {
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  content: "";
+  height: 100%;
+  width: 1px;
+  background: var(--clr-black);
+}
 
 @-webkit-keyframes topBubbles {
   0% {
