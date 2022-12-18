@@ -162,7 +162,7 @@
         }
     }
 
-    .task-4 {
+    .task-4, .task-5 {
 
         .menu-container {
             position: relative;
@@ -172,15 +172,64 @@
 
             .indicator {
                 position: absolute;
-                bottom: -2px;
                 left: 0;
-
-                height: 2px;
 
                 background: var(--clr-red);
 
                 transition: all 0.5s ease-in-out;
             }     
+        }
+    }
+
+    .task-4 {
+
+        .indicator {
+            bottom: -2px;
+            height: 2px;
+        }
+    }
+
+    .task-5 {
+
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 7.5rem;
+
+            gap: 0.5rem;
+
+            z-index: 1;
+
+            > a {
+                opacity: 0;
+
+                transition: all 0.3s ease-in-out;
+            }
+
+            .menu-icon {
+                height: 3rem;
+                width: 100%;
+            }
+
+            &.active {
+                > a {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .indicator {
+            top: calc(-1 * 7.5rem / 6);
+            transform: translateY(-50%);
+
+            aspect-ratio: 1 / 1;
+
+            z-index: 0;
+
+            border-radius: 1.5rem;
         }
     }
 }

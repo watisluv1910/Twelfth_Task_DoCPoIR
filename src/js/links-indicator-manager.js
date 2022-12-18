@@ -1,22 +1,27 @@
-const indicator = document.querySelector('.indicator');
-const links = document.querySelector('.task-4').querySelectorAll('.menu-item');
-
 function init() {
 
-    for (let link of links) {
+    for (let task of document.querySelectorAll(".task-4, .task-5")) {
 
-        link.addEventListener('mouseenter', function() {
-            indicator.style.width = `${this.offsetWidth}px`;
-            indicator.style.transform = `translateX(${this.offsetLeft}px)`;
+        const links = task.querySelectorAll('.menu-item');
+        const indicator = task.querySelector('.indicator');
 
-            link.classList.add('active');
+        console.log(indicator);
 
-            this.addEventListener('mouseleave', function() {
+        for (let link of links) {
 
-                indicator.style.width = `0px`;
-                link.classList.remove('active');
+            link.addEventListener('mouseenter', function() {
+                indicator.style.width = `${this.offsetWidth}px`;
+                indicator.style.transform = `translateX(${this.offsetLeft}px)`;
+    
+                link.classList.add('active');
+    
+                this.addEventListener('mouseleave', function() {
+    
+                    indicator.style.width = `0px`;
+                    link.classList.remove('active');
+                });
             });
-        });
+        }
     }
 }
 
