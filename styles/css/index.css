@@ -156,3 +156,64 @@
   z-index: 0;
   border-radius: 1.5rem;
 }
+.main-content .task-6 {
+  position: relative;
+}
+.main-content .task-6 .modal-btn:not(.icon-container) {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--clr-red);
+}
+.main-content .task-6 .modal {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.main-content .task-6 .modal .modal-header {
+  position: relative;
+  padding: 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: var(--clr-dark-blue);
+}
+.main-content .task-6 .modal .modal-header .icon-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.main-content .task-6 .modal .modal-header .img-container {
+  grid-column-end: span 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-content .task-6 .modal .modal-header .img-container > img {
+  max-width: 20rem;
+}
+.main-content .task-6 .modal .modal-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  background: var(--clr-white);
+}
+.main-content .task-6 .modal .modal-body > *:not(.modal-btn) {
+  color: var(--clr-black);
+}
+.main-content .task-6 .modal.active {
+  opacity: 1;
+}

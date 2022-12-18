@@ -232,4 +232,87 @@
             border-radius: 1.5rem;
         }
     }
+
+    .task-6 {
+        position: relative;
+
+        .modal-btn:not(.icon-container) {
+            width: fit-content;
+
+            padding: 0.5rem 1rem;
+
+            border-radius: 0.5rem;
+            background: var(--clr-red);
+        }
+
+        .modal {
+            position: fixed;
+            right: 2rem;
+            bottom: 2rem;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 30rem;
+
+            z-index: 1;
+            opacity: 0;
+
+            transition: all 0.5s ease-in-out;
+
+            .modal-header {
+                position: relative;
+                padding: 2rem;
+
+                width: 100%;
+
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                background: var(--clr-dark-blue);
+
+                .icon-container {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                .img-container {
+                    grid-column-end: span 2;
+
+                    width: 100%;
+
+                    display: flex;
+                    justify-content: center;
+
+                    > img {
+                        max-width: 20rem;
+                    }
+                }
+            }
+
+            .modal-body {
+                padding: 2rem;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                text-align: center;
+
+                background: var(--clr-white);
+
+                > *:not(.modal-btn) {
+                    color: var(--clr-black);
+                }
+            }
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
 }
