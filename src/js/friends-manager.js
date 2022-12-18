@@ -20,7 +20,7 @@ function init() {
         new Friend('Rick', 71, 'male'),
     ];
 
-    let cardsContainer = document.querySelector('.cards-container');
+    let cardsContainer = document.getElementById('friend-cards-container');
 
     for (let friend of friends) {
         let card = document.createElement('div');

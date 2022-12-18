@@ -7,7 +7,7 @@
   transition: all 0.1s ease-in-out;
 }
 .clickable:hover {
-  color: var(--clr-light-blue);
+  transform: scale(1.05);
 }
 .clickable:active {
   color: rgba(255, 255, 255, 0.6);
@@ -23,15 +23,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.main-content .task-1 .img-container {
   padding: 3rem;
 }
 .main-content .task-2 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  padding: 3rem;
 }
 .main-content .task-2 .grid-container .grid-item {
   display: flex;
@@ -54,4 +51,66 @@
 .main-content .task-2 .grid-container .grid-item.card:hover {
   transform: scale(1.05);
   background: linear-gradient(60deg, var(--clr-dark-orange), var(--clr-dark-red), var(--clr-mid-orange));
+}
+.main-content .task-3 .flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+}
+.main-content .task-3 .flex-container .card {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  max-width: min(30rem, 30%);
+  padding: 2rem;
+  border-radius: 1rem;
+  background: var(--clr-dark-blue);
+  transition: all 0.3s ease-in-out;
+}
+.main-content .task-3 .flex-container .card-header {
+  display: grid;
+  gap: 1rem;
+}
+.main-content .task-3 .flex-container .card-img {
+  width: min(15rem, 50%);
+}
+.main-content .task-3 .flex-container .card-body {
+  position: relative;
+  height: 10rem;
+  overflow: hidden;
+  transition: all 0.1s ease-in-out;
+}
+.main-content .task-3 .flex-container .card-body::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 60%;
+  width: 100%;
+  content: "";
+  background: linear-gradient(180deg, transparent, var(--clr-dark-blue), var(--clr-dark-blue));
+  transition: inherit;
+}
+.main-content .task-3 .flex-container .card .expand-btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--clr-mid-orange);
+}
+.main-content .task-3 .flex-container .card.active .card-body {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.main-content .task-3 .flex-container .card.active .card-body::after {
+  opacity: 0;
+}
+.main-content .task-3 .flex-container .card.active .expand-btn {
+  position: unset;
+  background: var(--clr-red);
 }
