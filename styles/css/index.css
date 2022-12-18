@@ -1,0 +1,26 @@
+.body-content {
+  background: var(--clr-black);
+}
+
+.clickable {
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.clickable:hover {
+  color: var(--clr-light-blue);
+}
+.clickable:active {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.main-content {
+  color: var(--clr-white);
+}
+.main-content section[class*=task-] {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
